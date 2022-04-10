@@ -66,9 +66,14 @@
     const handleUpdate = (e) => {
       const { value, name, dataset: { sizing } } = e.target;
       const suffix = sizing ?? '';
+      // documentElement returns the Element that is the root element of the document 
+      // (for example, the <html> element for HTML documents).
+      // The CSSStyleDeclaration.setProperty() method interface sets a new value 
+      // for a property on a CSS style declaration object.
       document.documentElement.style.setProperty(`--${name}`, value + suffix)
     }
 
+    // console.log(document.documentElement.style)
     inputs.forEach(input => input.addEventListener("change", handleUpdate))
   </script>
 
