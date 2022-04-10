@@ -52,6 +52,14 @@
     // Array.prototype.sort()
     // 3. Sort the inventors by birthdate, oldest to youngest
 
+    // To compare numbers instead of strings, 
+    // the compare function can subtract b from a. 
+    // The following function will sort the array in ascending order 
+    // (if it doesn't contain Infinity and NaN):
+    function compareNumbers(a, b) {
+      return a - b;
+    }
+
     // console.log(inventors.sort((a, b) => a.year - b.year))
     const ordered = inventors.sort((firstPerson, secondPerson) => {
       if (firstPerson.year > secondPerson.year) {
@@ -68,6 +76,8 @@
     // Array.prototype.reduce()
     // 4. How many years did all the inventors live all together?
 
+    // console.log("4:", inventors.reduce((prev, curr) => prev + (curr.passed - curr.year), 0))
+
     const totalYears = inventors.reduce((total, inventor) => {
       console.log(inventor, (inventor.passed - inventor.year), total + (inventor.passed - inventor.year))
       return total + (inventor.passed - inventor.year);
@@ -75,6 +85,9 @@
     console.log(totalYears)
 
     // 5. Sort the inventors by years lived
+
+    // console.log("------------------------")
+    // console.table(inventors.sort((a, b) => (a.passed - a.year) - (b.passed - b.year)))
 
     const oldest = inventors.sort((a, b) => {
       const lastGuy = a.passed - a.first;
@@ -93,6 +106,14 @@
 
     // 7. sort Exercise
     // Sort the people alphabetically by last name
+
+    console.table(people.sort((a, b) => {
+      const aLastName = a.split(", ").pop();
+      const bLastName = b.split(", ").pop();
+
+      // return aLastName - bLastName // sort by number
+      // return aLastName > bLastName ? 1 : - 1;
+    }))
 
     const alpha = people.sort((lastOne, nextOne) => {
       const [aLast, aFirst] = lastOne.split(', ');
