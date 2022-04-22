@@ -1,4 +1,10 @@
 .buttonRow {
   overflow: auto;
   white-space: nowrap;
+  /* To remove its parents padding using negative margin */
+  /* The reason why negative margin size is not exact sams as its parents padding is that I want to give some space. */
+  margin-left: -22px;
+  margin-right: -22px;
+  margin-bottom: -22px;
+  padding: 22px;
 }
