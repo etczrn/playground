@@ -26,14 +26,21 @@ const Wrapper = styled.div`
   font-size: 0.875rem;
   color: ${COLORS.gray[300]};
   background-color: ${COLORS.gray[900]};
+
   display: flex;
-  justify-content: space-between;
-  gap: 16px;
-  padding: 8px 16px;
+  height: 40px;
+  align-items: center; // vertical string center
+
+  /* padding from figma */
+  padding-left: 32px;
+  padding-right: 32px;
+
+  gap: 24px; /* gap from figma */
 `;
 
 const MarketingMessage = styled.span`
   color: ${COLORS.white};
+
   margin-right: auto;
 `;
 

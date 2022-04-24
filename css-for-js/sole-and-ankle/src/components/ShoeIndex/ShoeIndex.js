@@ -43,11 +43,13 @@ const ShoeIndex = ({ sortId, setSortId }) => {
 const Wrapper = styled.div`
   display: flex;
   flex-direction: row-reverse;
-  justify-content: space-between;
-  gap: 100px;
+  gap: 32px;
+  align-items: baseline; // Home / Sale / Shoes baseline === Running baseline
 `;
 
-const LeftColumn = styled.div``;
+const LeftColumn = styled.div`
+  flex-basis: 248px;
+`;
 
 const MainColumn = styled.div`
   flex: 1;
@@ -55,6 +57,7 @@ const MainColumn = styled.div`
 
 const Header = styled.header`
   display: flex;
+  align-items: baseline;
   justify-content: space-between;
 `;
 

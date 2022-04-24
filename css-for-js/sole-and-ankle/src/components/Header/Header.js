@@ -12,7 +12,9 @@ const Header = () => {
     <header>
       <SuperHeader />
       <MainHeader>
-        <Logo />
+        <Side>
+          <Logo />
+        </Side>
         <Nav>
           <NavLink href="/sale">Sale</NavLink>
           <NavLink href="/new">New&nbsp;Releases</NavLink>
@@ -21,24 +23,27 @@ const Header = () => {
           <NavLink href="/kids">Kids</NavLink>
           <NavLink href="/collections">Collections</NavLink>
         </Nav>
+        <Side />
       </MainHeader>
     </header>
   );
 };
 
 const MainHeader = styled.div`
-  padding: 0 32px;
   border-bottom: 1px solid ${COLORS.gray[300]};
-  display: flex;
-  padding: 16px;
+
+  display: flex; /* 1. make the wrapper flex */
+
+  height: 72px;
   align-items: baseline;
-  justify-content: space-between;
+
+  padding: 18px 32px;
 `;
 
 const Nav = styled.nav`
   display: flex;
-  width: 880px;
-  justify-content: space-between;
+  gap: 48px;
+  margin: 0 48px; // add margin to prevent sale link from overlapping with logo
 `;
 
 const NavLink = styled.a`
@@ -51,6 +56,11 @@ const NavLink = styled.a`
   &:first-of-type {
     color: ${COLORS.secondary};
   }
+`;
+
+// 2. The side elements are used to align the logo and nav links
+const Side = styled.div`
+  flex: 1;
 `;
 
 export default Header;
