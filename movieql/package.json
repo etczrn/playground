@@ -4,11 +4,15 @@
   "description": "Movie API with Graphql",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon --exec babel-node index.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "graphql-yoga": "^2.3.0"
+    "@babel/core": "^7.17.10",
+    "@babel/node": "^7.17.10",
+    "@babel/preset-env": "^7.17.10",
+    "graphql-yoga": "^1.18.3"
   }
 }
