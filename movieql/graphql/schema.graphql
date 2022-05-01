@@ -1,0 +1,4 @@
+# description for query
+type Query {
+  name: String!
+}
