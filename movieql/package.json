@@ -13,7 +13,7 @@
     "@babel/core": "^7.17.10",
     "@babel/node": "^7.17.10",
     "@babel/preset-env": "^7.17.10",
-    "graphql-yoga": "^2.5.0",
-    "node-fetch": "^3.2.4"
+    "graphql-yoga": "^1.6.0",
+    "node-fetch": "^2.6.1"
   }
 }
